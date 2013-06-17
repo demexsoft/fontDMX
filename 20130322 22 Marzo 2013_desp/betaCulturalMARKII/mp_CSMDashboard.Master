@@ -1,0 +1,168 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mp_CSMDashboard.master.cs" Inherits="betaCulturalMARKII.mp_CSMDashboard" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="estilos/stilocomponente.css" rel="stylesheet" type="text/css" />
+    <link href="estilos/fuentes.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            width: 74px;
+        }
+        .style3
+        {
+            width: 76px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table width="100%" border="0">
+            <tr style="height:140px;">
+                        <td colspan="2" valign="top">
+                            <asp:Image ID="img_logo" runat="server" ImageUrl="~/imagenesBasicas/imgApplicacion/logoci _2012.jpg"/>    
+                             <asp:Panel ID="pnl_datos_generales" CssClass="pnl_datos_generales" runat="server">
+                                    
+                                    <table>
+                <tr>
+                    <td class="style3">
+                        
+                        <asp:Label ID="lbl_empleado_general" runat="server" CssClass="textoVerde_" 
+                            Text="&lt;strong&gt;Employed&lt;/strong&gt;"></asp:Label>
+                        
+                    </td>
+                    <td>
+                        
+                        <asp:Label ID="lbl_nombre_empleado" runat="server" CssClass="textoNormal_"></asp:Label>
+                        
+                    </td>
+                    
+                </tr>
+                 <tr>
+                    <td class="style3">
+                    
+                        <asp:Label ID="lbl_equipo_general" runat="server" CssClass="textoVerde_" 
+                            Text="&lt;strong&gt;Team&lt;/strong&gt;"></asp:Label>
+                    
+                    </td>
+                    <td>
+                    
+                        <asp:Label ID="lbl_nombre_equipo" runat="server" CssClass="textoNormal_"></asp:Label>
+                    
+                    </td>
+                    
+                </tr>
+                 <tr>
+                    <td class="style3">
+                    
+                        <asp:Label ID="lbl_lider_general" runat="server" CssClass="textoVerde_" 
+                            Text="&lt;strong&gt;Leader&lt;/strong&gt;"></asp:Label>
+                    
+                    </td>
+                    <td>
+                    
+                        <asp:Label ID="lbl_nombre_jefe" runat="server" CssClass="textoNormal_"></asp:Label>
+                    
+                    </td>
+                    
+                </tr>
+                 <tr>
+                    <td class="style3">
+                        &nbsp;</td>
+                    <td>
+                        
+                        <asp:Label ID="lbl_pefil_general" runat="server" CssClass="textoNormal_" Visible="false"></asp:Label>
+                        
+                    </td>
+                    
+                </tr>
+
+              </table>             
+
+                                   <br/>
+                                                                                             
+                                   <asp:LinkButton ID="btn_lnk_menu"  Text="Back to Main " CssClass="textoNormalAzul_" 
+                                                    runat="server" Font-Underline="False" 
+                                       onclick="btn_lnk_menu_Click" ></asp:LinkButton>
+                                   <asp:LinkButton ID="btn_lnk_salir"  Text="  |  Exit  | " CssClass="textoNormalRojo_" 
+                                                   runat="server" Font-Underline="False" 
+                                       onclick="btn_lnk_salir_Click" ></asp:LinkButton>
+
+                             </asp:Panel>                                                                                                                             
+                        </td>
+                    </tr>
+            <tr>
+                <td style="width:350px;" valign="top">
+                    <table width="300px" border="0">
+                        <tr>
+                            <td class="tablaMenu_iconoJPC_white">
+                                <asp:Label ID="Label1" runat="server" Text="CSM DASHBOARD" CssClass="textoNormalAzul_" Font-Bold="true"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br />
+                            </td>
+                        </tr>
+
+                        <tr class="tablaMenu_iconoJPC">
+                            <td>
+                                <asp:Label ID="Label5" runat="server" Text="MONTHLY PERFORMANCE" CssClass="textoNormalBlanco_"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:ImageButton ID="btn_MP" runat="server" 
+                                    ImageUrl="~/imagenesBasicas/botonesImagenes/reporte.jpg" 
+                                    onclick="btn_MP_Click" />
+                            </td>
+                        </tr>
+
+
+                        <tr class="tablaMenu_iconoJPC">
+                            <td>
+                                <asp:Label ID="Label2" runat="server" Text="OVERALL PERFORMANCE" CssClass="textoNormalBlanco_"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:ImageButton ID="btn_OP" runat="server" 
+                                    ImageUrl="~/imagenesBasicas/botonesImagenes/reporte.jpg" 
+                                    onclick="btn_OP_Click" />
+                            </td>
+                        </tr>
+                        <tr class="tablaMenu_iconoJPC">
+                            <td>
+                                <asp:Label ID="Label3" runat="server" Text="MONTHLY COMPARATIVES" CssClass="textoNormalBlanco_"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:ImageButton ID="btn_EficaciaEficiencia" runat="server" 
+                                    ImageUrl="~/imagenesBasicas/botonesImagenes/reporte.jpg" 
+                                    onclick="btn_EficaciaEficiencia_Click" />
+                            </td>
+                        </tr>
+                        <tr class="tablaMenu_iconoJPC">
+                            <td>
+                                <asp:Label ID="Label4" runat="server" Text="OVERALL COMPARATIVES" CssClass="textoNormalBlanco_"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:ImageButton ID="btn_Comparatives" runat="server" 
+                                    ImageUrl="~/imagenesBasicas/botonesImagenes/reporte.jpg" 
+                                    onclick="btn_Comparatives_Click" />
+                            </td>
+                        </tr>                        
+                    </table>
+                </td>
+                <td valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>        
+    </div>
+    </form>
+</body>
+</html>

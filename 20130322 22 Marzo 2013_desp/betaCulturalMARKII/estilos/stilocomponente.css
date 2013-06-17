@@ -1,0 +1,656 @@
+﻿body
+{
+	font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    letter-spacing: 1px;
+    color:#3d3c3c;
+	}
+#body
+{
+	font-family:Arial;
+    font-size:12px;
+    background-image:url(../imagenesBasicas/imgApplicacion/fondoGeneral.jpg);
+    background-repeat:repeat-x;
+}
+
+#pnl_conten_main_log
+{
+   /* background-image:url(../imagenesBasicas/imgApplicacion/fondo.jpg); Se quito 22 Marzo 2013 como el ppt de alberto*/
+    background-repeat:no-repeat;
+    position:absolute;
+    width: 1024px;
+    height:490px;
+ }
+
+
+#pnl_content_loggin 
+{
+    
+    position:relative;
+    width: 350px;
+    height: 240px;
+    top:80px;
+    left:200px;
+   
+	
+    
+}
+#pnl_controls_loggin 
+{   
+    position:relative;
+    
+}
+
+
+
+/*
+    Estilos de componentes en 'pincipalControl.aspx'
+*/
+/*panel para los datos generales nombre, ekipo y otros*/
+
+.pnl_datos_generales
+{
+    position:absolute;
+    width: 395px;
+    right:240px;
+    top:10px;
+    
+}
+
+
+
+
+#pnl_conten_principalControl
+{
+    
+    position:absolute;
+    width: 960px;
+    height:100%;
+    
+}
+
+/*
+    panel para la seleccion del ekipo al iniciar la sesion del pues del loguearse
+*/
+#pnl_ini_selecciona_equipo
+{
+    background-color:#FFFFFF;
+    position:absolute;
+    left:500px;
+    width: 600px;
+    height: 240px;
+  
+}
+
+#pnl_ini_loggin_logos
+{
+    background-color:#FFFFFF;
+    position:absolute;
+   
+    width: 600px;
+    height: 240px;
+  
+}
+#pnl_img_logo
+{   
+    position:absolute;
+    left:30px;
+    top:-80px;
+      
+ }
+
+
+#pnl_conten_accesosDirectos
+{
+    background-repeat:no-repeat;
+    position:absolute;
+    width: 700px;
+    height:715px;
+    top:12px;
+    left:260px;
+}    
+
+/*Contiene a todos los contents y al home/exit */
+
+.pnl_content_menuLateral
+{
+    border:1px;
+    border-color:Aqua;
+    top:140px; 
+    position:absolute; 
+    width: 260px;
+    height:760px;
+
+}
+
+
+
+
+#pnl_content_general
+{   
+    background-repeat:no-repeat;
+    top:125px;
+    left:90px;
+    position:absolute;
+    width: 960px;
+    height:700px;
+    
+    
+ }
+ 
+ 
+#pnl_content_charAdmin_equipo
+{
+    top:20px;
+    left:15px;
+    position:absolute;
+    }
+#pnl_content_ADMIN_empleado
+{
+     top:20px;
+    left:15px;
+    position:absolute;
+    
+    }
+
+
+/*Accesos a HOME/EXIT */
+
+
+#pnl_content_HOME
+{
+    
+    background-image:url(../imagenesBasicas/fondoHOMEEXIT.png);
+    background-repeat:no-repeat;
+    top:100px;
+    left:630px;
+    position:absolute;
+    width: 200px;
+    height:100px;
+    
+    }
+
+
+/*
+Estilos para tablas
+*/
+
+
+.tituloTabla
+{
+    
+    
+    background-repeat:no-repeat;
+    height:38px;
+    
+}
+
+
+.tdTabla
+{
+    background-color:#456F97;
+  
+}
+.tdMenu
+{
+    border-color: #A1A1A1;
+    height:64px;
+     
+}
+
+.tablaMenu_icono
+{
+    width:250px; 
+    height:50px;
+    
+    
+    }
+
+.tablaMenu_iconoJPC
+{    
+    background-color:#456F97;
+    text-align:center; 
+    font-weight:bold;   
+    height:50px;
+    }
+.tablaMenu_iconoJPC_white
+{    
+    background-color:White;
+    text-align:center; 
+    font-weight:bold;   
+    height:50px;
+    }
+
+
+#pnl_error_app
+{
+    position:absolute;
+    width:100px;
+    height:100px;
+    z-index:900;
+    
+}
+
+
+/*
+Panel Izquierdo 'pnl_panel_izquierdo'
+*/
+
+
+
+
+
+/*AREA*/
+
+.pnl_contenedor_pantallas
+{
+    position:absolute;
+    width: 850px;
+    height: 630px;
+    top:140px;
+    left:280px;
+    
+    
+}
+
+#pnl_content_area
+{
+    top:20px;
+    left:5px;
+    position:absolute;
+    width: 600px;
+    height:600px;
+      
+}
+
+/*Matriz Individual*/
+
+
+.pnl_controles_matrizIndividual
+{
+    background-color:#FFFFFF;
+    
+    width:100%;
+    height:720px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:800;
+    opacity: 0.97;
+	filter:alpha(opacity=97);
+    
+}
+
+#pnl_controles_matrizEquipo
+{
+    
+    background-color:#FFFFFF;
+    width:100%;
+    height:720px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:810;
+    opacity: 0.97;
+	filter:alpha(opacity=97);
+    
+    }
+
+
+
+/*Empleado*/
+
+
+#pnl_content_empleado
+{
+    
+    
+    
+    top:20px;
+    left:5px;
+    position:absolute;
+    width: 600px;
+    height:600px;
+      
+}
+
+/*Empleado*/
+
+
+/*pnl_content_juntas*/
+#pnl_content_juntas
+{
+    
+    background-color:#FFFFFF;
+    top:20px;
+    position:absolute;
+    width: 750px;
+    height:600px;
+      
+}
+
+#scrollComponente
+{
+    overflow:auto;
+    height:200px;
+    width:280px;
+     
+}
+
+
+
+/*pnl_content_juntas*/
+.tbl_Junta_Calendario
+{
+    background-color:#FFFFFF;
+    position:relative;
+  
+    
+    }
+
+
+
+.calendario_juntas A
+{
+  text-decoration:none;
+}
+
+.calendario_juntas_Dias
+{   
+    font-family:Arial;
+    padding-left:40px;
+    padding-bottom:40px;
+    
+    
+ 
+        
+}
+    
+
+
+/*Equipo*/
+
+
+#pnl_content_equipo
+{
+    top:20px;
+    left:5px;
+    position:absolute;
+    width: 525px;
+    height:615px;
+    
+}
+
+
+
+
+/*Equipo*/
+
+
+
+/*Empleados Disponibles*/
+
+.pnl_content_empleadosDisponibles
+{
+   
+   background-color:#666666;
+   top:150px;
+   left:310px;
+   position:absolute;
+   width: 650px;
+   height:600px;
+   z-index:910;
+   opacity: 0.95;
+   filter:alpha(opacity=95);
+    
+    }
+
+/*Empleados Disponibles*/
+
+
+
+#pnl_content_ViewEquipos
+{
+    padding-top:5px;
+    position:static;
+    overflow:auto;
+    height:155px;
+    width:100px;
+    border:solid 1px #999999;
+    background-color:#A8B2C5;
+   
+    
+}
+
+.pnl_content_calendario
+{
+    position:absolute;
+    width:230px;
+    height:200px;
+    padding-top:10px;
+    padding-left:10px;
+    background-color:#999999;
+    opacity: 0.80;
+    z-index:900;
+	filter:alpha(opacity=80);
+}
+
+
+.pnl_calendario
+{
+    width:735px;
+    height:550px;
+    position:absolute;
+    
+}
+
+.calendario_Dias
+{
+    width:100px;
+    height:100px;
+    position:absolute;   
+    background-color:#FFFFFF;
+    border:solid 1px;
+    border-color:#C0C0C0;
+    top:10px;
+    overflow:auto;
+    
+}
+.calendario_Dias_numero
+{ 
+    text-align:right;
+    
+     background-color:#999999;
+     font-family:Arial;
+     font-size:11px;
+     width:100%;
+     height:12px;
+     font-weight:bold;
+     position:absolute;
+     top:0px;
+     
+    
+}
+
+.titulo_junta_Dia
+{
+     
+     font-family:Arial;
+     font-size:11px;
+     border:solid 2px #8DAED9;
+     width:84%;
+     height:12px;
+     position:absolute;
+     left:2px;
+     background-color:#A5BFE1;
+}
+
+.ver_juntas_Dia
+{
+    
+    position:absolute;
+    height:100%;
+    top:150px;
+    width:735px;
+    background-color:Silver;
+    opacity: 0.95;
+	filter:alpha(opacity=95);
+	visibility:hidden;
+	z-index:100;
+}
+.ver_datos_junta
+{
+    
+    position:absolute;
+    height:800px;
+    width:800px;
+    background-color:#FFFFFF;
+    opacity: 0.95;
+	filter:alpha(opacity=95);
+	z-index:90;
+	visibility:hidden;
+}
+.titulo_Dia_nombre
+{
+    
+    position:absolute;    
+    background-color:#A8B2C5;
+    border:1px;
+    border-color:#999999;
+    top:0px;
+    font-family:Arial;
+    font-size:13px;
+    text-align:center;
+    font-weight:bold;
+    
+    color:#FFFFFF;
+    width:100px;
+}
+
+
+#pnl_content_graficas
+{
+    width:800px;
+    height:550px;
+    top:20px;
+    position:absolute;
+    background-color:#FFFFFF;
+    
+}
+
+
+#pnl_grafica_ADMIN_empleado
+{
+    width:500px;
+    height:500px;
+    position:absolute;
+    background-color:Fuchsia;
+}
+#pnl_navegacion
+{
+    text-align:center;
+    position:absolute;
+    top:1px;
+    right:1px;
+    background-color:#A8B2C5;
+    width:70px;
+    height:20px;
+    
+}
+
+table.resultTable {
+	        border-collapse:collapse;
+	        font-family:  Arial, Helvetica, sans-serif;
+	        font-size:11px;
+	        color: #000;
+	        vertical-align:middle;
+	        border-right: #686868 1px solid;    	        
+            border-left: #686868 1px solid; 
+            border-top: #686868 1px solid; 
+            border-bottom: #686868 1px solid; 
+	        margin:0px;
+	        text-align:center;
+        }
+        .headerGrid
+        {
+        	background-image:url(../imagenesBasicas/imgGrid/HeaderGrid.gif);
+			background-repeat:repeat-x;
+	        border-right: #686868 1px solid;    	        
+            border-left: #686868 1px solid; 
+            border-top: #686868 1px solid; 
+            border-bottom: #686868 1px solid;
+	        font-family: Arial, sans-serif;
+	        font-weight: normal;
+	        font-size: 11px;
+	        font-variant: normal;
+	        color: #000;
+	        text-transform: none;
+	        text-decoration: none;	
+	        font-style: normal;	        
+	        vertical-align: middle;
+	        line-height: 15px;
+	        text-align: center;
+	        padding-left: 12px;
+	        padding-right: 12px;
+	        padding-bottom: 0px;
+	        white-space:nowrap;
+        }
+
+        .itemGrid{        	
+            font-weight: normal;
+            font-size: 11px;            
+            color: #333;    
+            font-family: Arial, sans-serif;
+            text-transform: none;
+	        text-decoration: none;
+            background-color: transparent;
+	        padding-left:12px;	
+	        padding-right: 11px;	        	        
+        }
+        .footerGrid
+        {        	
+        	background-image:url(../imagenesBasicas/imgGrid/FooterGrid.gif);
+			background-repeat:repeat-x;
+        	font-family:  Arial, Helvetica, sans-serif;
+	        font-size:11px;
+	        color:#000;
+	        text-align:right;
+        	}
+        .headerTitleGrid
+        {
+        	background-color:#456F97;
+        	color:White;
+        	font-weight:bold;
+            font-size: 12px; 
+            text-align:left;
+            letter-spacing: 4px;
+            
+        	}
+        	
+ .btn_GrisRedondo
+ {
+ 	background-image:url(../imagenesBasicas/btn_Gris.gif); 	
+ 	background-repeat:no-repeat;
+ 	border-style:none;
+ 	width:100px;
+ 	height:25px;
+ 	font-size:11px;
+ 	font-weight:bold;
+ 	color:#444444;    
+ 	}
+ 	
+ .btn_Azul
+ { 	
+    background-color:#456F97;
+ 	border-style:none;
+ 	width:150px;
+ 	height:25px;
+ 	font-size:11px;
+ 	font-weight:bold;
+ 	color:White;    
+ 	}
+ .tbl_Grafica
+ {
+     background-color:#456F97;     
+     }
+ 

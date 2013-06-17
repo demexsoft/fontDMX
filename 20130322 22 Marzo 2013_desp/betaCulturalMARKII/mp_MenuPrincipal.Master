@@ -1,0 +1,380 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mp_MenuPrincipal.master.cs" Inherits="betaCulturalMARKII.mp_MenuPrincipal" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="estilos/stilocomponente.css" rel="stylesheet" type="text/css" />
+    <link href="estilos/fuentes.css" rel="stylesheet" type="text/css" />
+    <script  type="text/javascript" src="../javaS/js_calendario.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 76px;
+        }
+    </style>
+</head>
+<body id="body">
+    <form id="form1" runat="server">
+        <cc1:toolkitscriptmanager runat="server">
+        </cc1:toolkitscriptmanager>
+    <div>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>            
+                <table width="100%" border="0">
+                    <tr style="height:120px;">
+                        <td colspan="2" valign="top">
+                            <asp:Image ID="img_logo" runat="server" ImageUrl="~/imagenesBasicas/imgApplicacion/logoci _2012.jpg"/>    
+                             <asp:Panel ID="pnl_datos_generales" CssClass="pnl_datos_generales" runat="server">
+              
+              <table>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="lbl_empleado_general" runat="server" CssClass="textoVerde_" 
+                            Text="&lt;strong&gt;Employed&lt;/strong&gt;"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_nombre_empleado" runat="server" CssClass="textoNormal_"></asp:Label>
+                    </td>
+                    <td>
+                    </td>
+                    
+                </tr>
+                 <tr>
+                    <td>
+                        <asp:Label ID="lbl_equipo_general" runat="server" CssClass="textoVerde_" 
+                            Text="&lt;strong&gt;Team&lt;/strong&gt;"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_nombre_equipo" runat="server" CssClass="textoNormal_"></asp:Label>
+                    </td>
+                    <td>
+                    </td>
+                    
+                </tr>
+                 <tr>
+                    <td class="style1">
+                        <asp:Label ID="lbl_lider_general" runat="server" CssClass="textoVerde_" 
+                            Text="&lt;strong&gt;Leader&lt;/strong&gt;"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_nombre_jefe" runat="server" CssClass="textoNormal_"></asp:Label>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        <asp:Label ID="lbl_pefil_general" runat="server" CssClass="textoNormal_"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="btn_lnk_menu" runat="server" CssClass="textoNormalAzul_" 
+                            Font-Underline="False" onclick="btn_lnk_menu_Click" Text="Back to Main "></asp:LinkButton>
+                            <asp:LinkButton ID="btn_lnk_salir"  Text="  |  Exit  | " CssClass="textoNormalRojo_" 
+                           runat="server" Font-Underline="False" onclick="btn_lnk_salir_Click"></asp:LinkButton>
+                    </td>
+                </tr>
+             
+
+              </table>
+                   
+     </asp:Panel>                                                                                                                             
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:350px;" valign="top">
+                            <!--MENU PRINCIPLA-->
+                            <table width="300px" border="0">
+                                <tr class="tablaMenu_iconoJPC" id="MnConfiguracionSistema" runat="server">
+                                    <td><asp:Label ID="lbl_aviso_configuracion_menu" runat="server" Text="System Configuration" CssClass="textoNormalBlanco_"></asp:Label></td>
+                                    <td><asp:ImageButton ID="btn_img_empresaConfiguracion" runat="server" ImageUrl="~/imagenesBasicas/botonesImagenes/empresa.jpg"
+                                                         onclick="btn_img_empresaConfiguracion_Click" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="left">
+                                        <asp:Panel ID="pnl_Configuracion" runat="server" Visible="true">
+                                            <table width="250px">
+                                                <tr align="right" id="IDSubMenu1" runat="server">
+                                                    <td><asp:Label ID="lbl_img_crearEquipo" runat="server" Text="Create a team" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td>
+                                                        <asp:ImageButton ID="btn_img_crearEquipo" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/btn_CrearEquipo.gif" 
+                                                            onclick="btn_img_crearEquipo_Click" /></td>
+                                                </tr>
+                                                <tr align="right" id="IDSubMenu2" runat="server">
+                                                    <td><asp:Label ID="lbl_img_equipos" runat="server" Text="Delete / Adjust a team" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_equipos" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/equipos.jpg" 
+                                                            onclick="btn_img_equipos_Click" /></td>
+                                                </tr>
+
+                                                <tr align="right" id="IDSubMenu3" runat="server">
+                                                    <td><asp:Label ID="Label10" runat="server" Text="Delete / Adjust an employee" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_agregarEmpleado" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/empleado.jpg" 
+                                                            onclick="btn_agregarEmpleado_Click" />
+                                                    </td>
+                                                </tr>
+
+<%--                                                <tr align="right" id="IDSubMenu4" runat="server">
+                                                    <td><asp:Label ID="Label27" runat="server" Text="Quitar Empleado" CssClass="textoNormalAzul_"></asp:Label> &nbsp; </td>
+                                                    <td><asp:ImageButton ID="btn_quitarEmpleado" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/empleadoQuitar.jpg" 
+                                                            onclick="btn_quitarEmpleado_Click" /></td>
+                                                </tr>
+--%>                                                <%--<tr align="right" id="IDSubMenu5" runat="server">
+                                                    <td><asp:Label ID="Label2" runat="server" Text="Ver Todos los Empleados" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_verTodosEmpledos" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/verEmpleado.jpg" 
+                                                            onclick="btn_img_verTodosEmpledos_Click" />
+                                                    </td>
+                                                </tr>--%>
+
+                                                 <tr align="right" id="IDSubMenu6" runat="server">
+                                                    <td><asp:Label ID="Label5" runat="server" Text="Create a user" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_crearUsuario" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/accesoUsuario.jpg" 
+                                                            onclick="btn_crearUsuario_Click" />
+                                                    </td>
+                                                </tr>
+
+                                                <tr align="center">
+                                                    <td colspan="2"><span class="textoNormalRojo_">________________________________</span></td>
+                                                </tr>
+<%--                                                <tr align="right" id="IDSubMenu7" runat="server">
+                                                    <td><asp:Label ID="lbl_img_todasAreas" runat="server" Text="Ver Areas" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_todasAreas" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/areaTodas.jpg" 
+                                                            onclick="btn_img_todasAreas_Click" /></td>
+                                                </tr>
+                                                <tr align="right" id="IDSubMenu8" runat="server">
+                                                    <td><asp:Label ID="Label30" runat="server" Text="Agregar Area" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_agregarArea" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/area.jpg" 
+                                                            onclick="btn_img_agregarArea_Click" /></td>
+                                                </tr>
+                                                <tr align="right" id="IDSubMenu9" runat="server">
+                                                    <td><asp:Label ID="Label31" runat="server" Text="Quitar Area" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_quitarArea" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/areaQuitar.jpg" 
+                                                            onclick="btn_img_quitarArea_Click" /></td>
+                                                </tr>
+                                                <tr align="center">
+                                                    <td colspan="2"><span class="textoNormalRojo_">________________________________</span></td>
+                                                </tr>                                                                                                
+                                                <tr align="right" id="IDSubMenu10" runat="server">
+                                                    <td><asp:Label ID="lbl_aviso_crearJunta" runat="server" Text="Establecer calendario"    CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_crearJunta" runat="server"     
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/calenCita.jpg" 
+                                                            onclick="btn_img_crearJunta_Click" /></td>
+                                                </tr>
+--%>  <%--                                              <tr align="right" id="IDSubMenu11" runat="server">
+                                                    <td><asp:Label ID="lbl_aviso_cerrarJunta" runat="server" Text="Cerrar Junta" CssClass="textoNormalAzul_"></asp:Label> </td>
+                                                    <td><asp:ImageButton ID="btn_img_cerrarJunta" runat="server"    
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/cerrarCalen.jpg" 
+                                                            onclick="btn_img_cerrarJunta_Click" /></td>
+                                                </tr>--%>
+                                                
+                                            </table>
+                                        </asp:Panel>
+                                        <cc1:CollapsiblePanelExtender ID="CollapsiblePanelExtender1" runat="server"
+                                              TargetControlID="pnl_Configuracion"
+                                              CollapsedSize="0"                                       
+                                              Collapsed="True" 
+                                              ExpandControlID="btn_img_empresaConfiguracion" 
+                                              CollapseControlID="btn_img_empresaConfiguracion"                                                                             
+                                             ExpandDirection="Vertical">
+                                        </cc1:CollapsiblePanelExtender>
+                                    </td>                            
+                                </tr>
+                                <tr class="tablaMenu_iconoJPC" id="MnHerramietasEquipo" runat="server">
+                                    <td><asp:Label ID="lbl_herramientaEquipo_menu" runat="server" Text="Team Tools" CssClass="textoNormalBlanco_"></asp:Label></td>
+                                    <td><asp:ImageButton ID="btn_img_herramientasEquipo" runat="server" ImageUrl="~/imagenesBasicas/botonesImagenes/miEquipo.jpg"
+                                                         onclick="btn_img_herramientasEquipo_Click" 
+                                            style="height: 34px" /></td>
+                                </tr>                    
+                                <tr>
+                                    <td colspan="2">
+                                        <asp:Panel ID="pnl_HerramientasEquipo" runat="server">
+                                            <table width="250px">
+                                                <tr align="right" id="IDSubMenu12" runat="server">
+                                                    <td><asp:Label ID="Label14" runat="server" Text="Team matrix management" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_todasMatrices_equipo" runat="server"    
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/allMat.jpg" 
+                                                            onclick="btn_img_todasMatrices_equipo_Click" /></td>
+                                                </tr>
+                                                <tr align="right" id="IDSubMenu13" runat="server">
+                                                    <td><asp:Label ID="lbl_aviso_crearMatrizEquipo" runat="server" Text="Create a team matrix" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_crearMatrizEquipo" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/addMatriz.jpg" 
+                                                            onclick="btn_img_crearMatrizEquipo_Click" /></td>
+                                                </tr>
+                                                <tr align="right" id="IDSubMenu14" runat="server">
+                                                    <td><asp:Label ID="Label91" runat="server" Text="Agreements & proposals" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_AcuerdosPropuestas" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/propuestas.jpg" 
+                                                            onclick="btn_img_AcuerdosPropuestas_Click" /></td>
+                                                </tr>
+                                                <tr align="right" id="IDSubMenu15" runat="server">
+                                                    <td><asp:Label ID="Label8" runat="server" Text="Incident Log" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_agregarIncongruencias" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/log_incidents.jpg" 
+                                                            onclick="btn_img_agregarIncongruencias_Click" /></td>
+                                                </tr>
+                                            
+                                                <%--<tr align="right" id="IDSubMenu16" runat="server">
+                                                    <td><asp:Label ID="Label88" runat="server" Text="Internal client evaluation" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_evalucacionCliente" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/btn_internal_client_evaluation.jpg" 
+                                                            onclick="btn_img_evalucacionCliente_Click" /></td>
+                                                </tr>  --%>                                              
+                                                <%--<tr align="right" id="IDSubMenu17" runat="server">
+                                                    <td><asp:Label ID="Label9" runat="server" Text="Agregar Recomendación" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_recomendaciones" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/recomendaciones.jpg" 
+                                                            onclick="btn_img_recomendaciones_Click" /></td>
+                                                </tr>--%>
+
+                                            </table>
+                                        </asp:Panel>
+                                        <cc1:CollapsiblePanelExtender ID="CollapsiblePanelExtender2" runat="server"
+                                              TargetControlID="pnl_HerramientasEquipo"
+                                              CollapsedSize="0"                                       
+                                              Collapsed="True" 
+                                              ExpandControlID="btn_img_herramientasEquipo" 
+                                              CollapseControlID="btn_img_herramientasEquipo"                                                                             
+                                             ExpandDirection="Vertical">
+                                        </cc1:CollapsiblePanelExtender>
+                                    </td>  
+                                </tr>
+                                <tr class="tablaMenu_iconoJPC" id="MnDesempenoSC" runat="server">
+                                    <td><asp:Label ID="lbl_aviso_performance" runat="server" Text="CS Performance" CssClass="textoNormalBlanco_"></asp:Label></td>
+                                    <td><asp:ImageButton ID="btn_img_performance" runat="server" ImageUrl="~/imagenesBasicas/botonesImagenes/performed.jpg"
+                                                         onclick="btn_img_performance_Click" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <asp:Panel ID="pnl_CSperformance" runat="server">
+                                            <table width="250px">
+                                                <tr align="right">
+                                                    <td><asp:Label ID="Label3" runat="server" Text="View Incident Log" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_verIncongruencias" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/log_incidents.jpg" 
+                                                            onclick="btn_img_verIncongruencias_Click" /></td>
+                                                </tr>
+<!--
+                                                <tr align="right" id="IDSubMenu18" runat="server">
+                                                    <td><asp:Label ID="Label94" runat="server" Text="Objetivos Equipo por Periodo" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_objetivosEquipo" runat="server"    
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/objMiekipo.jpg" 
+                                                            onclick="btn_img_objetivosEquipo_Click" /></td>
+                                                </tr>
+-->
+                                                <%--<tr align="right" id="IDSubMenu19" runat="server">
+                                                    <td><asp:Label ID="Label1" runat="server" Text="View Agreements & proposals" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_verAcuerdosPropuestas" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/propuestas.jpg" 
+                                                            onclick="btn_img_verAcuerdosPropuestas_Click"/></td>
+                                                </tr>--%>
+                                                <%--<tr align="right" id="IDSubMenu20" runat="server">
+                                                    <td><asp:Label ID="lbl_aviso_juntasCreadas" runat="server" Text="View calendar of team meetings" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_juntasCreadas" runat="server"    
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/todasCitas.jpg" 
+                                                            onclick="btn_img_juntasCreadas_Click" /></td>
+                                                </tr>--%>
+                                                <%--<tr align="right" id="IDSubMenu21" runat="server">
+                                                    <td><asp:Label ID="Label7" runat="server" Text="Ver Evaluaciones" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_internal_client_evaluation" runat="server"    
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/btn_internal_client_evaluation.jpg" 
+                                                            onclick="btn_internal_client_evaluation_Click" /></td>
+                                                </tr>    --%>                                                                                        
+                                            </table>
+                                        </asp:Panel>
+                                        <cc1:CollapsiblePanelExtender ID="CollapsiblePanelExtender3" runat="server"
+                                              TargetControlID="pnl_CSperformance"
+                                              CollapsedSize="0"                                       
+                                              Collapsed="True" 
+                                              ExpandControlID="btn_img_performance" 
+                                              CollapseControlID="btn_img_performance"                                                                             
+                                             ExpandDirection="Vertical">
+                                        </cc1:CollapsiblePanelExtender>
+                                    </td>
+                                </tr>
+                                <tr class="tablaMenu_iconoJPC" id="MnHerramietasIndividual" runat="server">
+                                    <td><asp:Label ID="Label62" runat="server" Text="Individual Tools" CssClass="textoNormalBlanco_"></asp:Label>
+                                    </td>
+                                    <td><asp:ImageButton ID="btn_img_individual" runat="server" ImageUrl="~/imagenesBasicas/botonesImagenes/invidual.jpg"   onclick="btn_img_individual_Click" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <asp:Panel ID="pnl_Individuales" runat="server">
+                                            <table width="250px">
+                                                <tr align="right" id="IDSubMenu22" runat="server">
+                                                    <td><asp:Label ID="Label6" runat="server" Text="Indivudual matrix management" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_matrices_todas" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/allMat.jpg" 
+                                                            onclick="btn_img_matrices_todas_Click" /></td>
+                                                </tr>
+                                                <tr align="right" id="IDSubMenu23" runat="server">
+                                                    <td><asp:Label ID="Label4" runat="server" Text="Create an individual matrix" CssClass="textoNormalAzul_"></asp:Label></td>
+                                                    <td><asp:ImageButton ID="btn_img_crearMatriz" runat="server" 
+                                                            ImageUrl="~/imagenesBasicas/botonesImagenes/addMatriz.jpg" 
+                                                            onclick="btn_img_crearMatriz_Click" /></td>
+                                                </tr>                                                
+                                            </table>
+                                        </asp:Panel>
+                                        <cc1:CollapsiblePanelExtender ID="CollapsiblePanelExtender4" runat="server"
+                                              TargetControlID="pnl_Individuales"
+                                              CollapsedSize="0"                                       
+                                              Collapsed="True" 
+                                              ExpandControlID="btn_img_individual" 
+                                              CollapseControlID="btn_img_individual"                                                                             
+                                             ExpandDirection="Vertical">
+                                        </cc1:CollapsiblePanelExtender>
+                                    </td>
+                                </tr>
+
+                                <tr class="tablaMenu_iconoJPC" id="MnCSMDashboard" runat="server">
+                                    <td colspan="2">
+                                   <asp:LinkButton ID="btn_link_ver_DashBoard" runat="server" Text="CSM Dashboard"  
+                                            CssClass="textoNormalBlanco_" onclick="btn_link_ver_DashBoard_Click"></asp:LinkButton>
+                                    </td>
+                                </tr>
+                                
+                                <tr align="center">
+                                    <td>
+                                        <asp:Label ID="Label50" runat="server" Text="My Team’s<br>Current Matrix" CssClass="textoNormalAzul_"></asp:Label>
+                                        <br />
+                                        <asp:ImageButton ID="btn_img_matrizEquipoVigente" runat="server" 
+                                            ImageUrl="~/imagenesBasicas/botonesImagenes/btn_VerMatrizEquipoVigente.gif" Width="60px" 
+                                            onclick="btn_img_matrizEquipoVigente_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="lbl_aviso_matrizVigente_menu" runat="server" Text="My Current<br>Matrix" CssClass="textoNormalAzul_"></asp:Label>
+                                        <br />
+                                        <asp:ImageButton ID="btn_img_miMatrizVigente" runat="server" 
+                                            ImageUrl="~/imagenesBasicas/botonesImagenes/btn_VerMatrizIndividualVigente.gif" Width="60px" 
+                                            onclick="btn_img_miMatrizVigente_Click" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td valign="top">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
+                            </asp:ContentPlaceHolder>                                        
+                        </td>
+                    </tr>
+                </table>
+            </ContentTemplate>
+        </asp:UpdatePanel>               
+    </div>
+    </form>
+</body>
+</html>

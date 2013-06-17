@@ -1,0 +1,118 @@
+﻿.textoChicoNegro_ 
+{
+    color:#000;
+    font-family:Arial;
+    font-size:9px;
+   
+}
+
+.textoChicoAzul_ 
+{
+    color:#456F97;
+    font-family:Arial;
+    font-size:10px;
+   
+}
+.textoNormalAzul_
+{
+    color:#00407F;
+    font-family:Arial;
+    font-size:12px;
+    
+}
+
+
+.textoChicoBlanco_ 
+{
+    color:#FFFFFF;
+    font-family:Arial;
+    font-size:10px;
+}
+
+.textoNormal_ 
+{
+    color:#000000;
+    font-family:Arial;
+    font-size:12px;
+   
+}
+.textoBOLDNegro_ 
+{
+    color:#000000;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+   
+}
+
+
+.textoNormalBlanco_ 
+{
+    color:#FFFFFF;
+    font-family:Arial;
+    font-size:12px;
+    
+}
+
+
+.tituloBlanco_
+{
+    color:#FFFFFF;
+    font-family:Arial;
+    font-size:19px;
+    font-weight:bold;
+    
+}
+.textoNormalRojo_ 
+{
+    color:#800000;
+    font-family:Arial;
+    font-size:12px;
+   
+}
+.textoEncabezadoGris_ 
+{
+    color:#999999;
+    font-family:Arial;
+    font-size:18px;
+   
+}
+
+
+.tituloGris_
+{
+    color:#999999;
+    font-family:Arial;
+    font-size:26px;
+}
+.tituloNegro_
+{
+    color:#000000;
+    font-family:Arial;
+    font-size:26px;
+}
+
+.tituloAzul_
+{
+    color:#456F97;
+    font-family:Arial;
+    font-size:18px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;    
+}
+
+.tituloVentanaGris_
+{
+    color:#999999;
+    font-family:Arial;
+    font-size:30px;
+}
+
+.headerGrids_
+{
+    color:#333333;
+    font-family:Arial;
+    font-size:14;
+    
+    }
